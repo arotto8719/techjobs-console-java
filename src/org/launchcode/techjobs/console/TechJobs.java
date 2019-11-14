@@ -64,9 +64,14 @@ public class TechJobs {
                     System.out.println("Search all fields not yet implemented.");
                 } else {
                     printJobs(JobData.findByColumnAndValue(searchField, searchTerm));
+//                    System.out.printIn("position type" + ":" + "" + "name" + ":" + "" + "employer" + ":" + "" + "location" + ":" + "" + "core company" + ":" + "");
+
                 }
             }
+            break;
         }
+        // create method findbyValue
+        private static void findbyValue()
     }
 
     // ﻿Returns the key of the selected item from the choices Dictionary
@@ -110,6 +115,17 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+        ArrayList<String> name = new ArrayList<>();
+        ArrayList<String> employer = new ArrayList<>();
+        ArrayList<String> location = new ArrayList<>();
+        ArrayList<String> positionType = new ArrayList<>();
+        ArrayList<String> coreCompetency = new ArrayList<>();
+        for (String column : String value) {
+            if (searchTerm == true) {
+                System.out.println("Found it!");
+                break;
+            }
+        HashMap<String, String, String, String, String> name, employer, location, positionType, coreComptency = new HashMap<>();
 
         System.out.println("printJobs is not implemented yet");
     }
