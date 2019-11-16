@@ -125,56 +125,50 @@ public class TechJobs {
     // Print a list of jobs
 // make arrayLists, HashMaps, and nested for loops to create printJobs
 // Print search results
-//    public static void printJobs (String[] ArrayList) {
-//        /**
-//         * @param args
-//         */
-//        public static void main(String[] args) {
+    public static void printJobs (String[] ArrayList) {
+        /**
+         * @param args
+         */
+        public static void main(String[] args) {
             // Setting up a HashMap
-//            HashMap<String, String> searchTerm = new HashMap<String, String>();
-//            searchTerm.put("positionType", "PositionType");
-//            searchTerm.put("name", "Name");
-//            searchTerm.put("employer", "Employer");
-//            searchTerm.put("location", "Location");
-//              searchTerm.put("coreCompetency", "CoreCompetency");
-//              searchTerm.put("all", "All");
-//
-//            System.out.println("Looping with Lambda expression forEach stmt");
-//            Set<Map.Entry<String, String>> valueSet = cityMap.entrySet();
-//            valueSet.forEach((a)->System.out.println("Key is " + a.getKey() +
-//                    " Value is " + a.getValue()));
-//-use online example?
-//            System.out.println("Looping with method reference forEach");
-//            cityMap.entrySet().forEach(System.out::println);
-//            // Looping HashMap directly with forEach
-//            System.out.println("Looping HashMap with forEach statement");
-//            cityMap.forEach((K,V)->System.out.println("Key is " + K + " Value is " + V));
-//        }
-//        private static void printJobs (ArrayList < HashMap < String, String >> new ArrayList<>()){
-//            ArrayList<String> name = new ArrayList<>();
-//            ArrayList<String> employer = new ArrayList<>();
-//            ArrayList<String> location = new ArrayList<>();
-//            ArrayList<String> positionType = new ArrayList<>();
-//            ArrayList<String> coreCompetency = new ArrayList<>();
-//            for (int i = 0; i <= new ArrayList i++) {
-//                System.out.println(i);
-//                if( new ArrayList == searchTerm) {
-//                    System.out.printIn(searchField, searchTerm);
-//                }
-//                HashMap<String, name> searchTerm = new HashMap<>();
-//                HashMap<String, employer> searchTerm = new HashMap<>();
-//                HashMap<String, location> searchTerm = new HashMap<>();
-//                HashMap<String, positionType> searchTerm = new HashMap<>();
-//                HashMap<String, coreCompetency> searchTerm = new HashMap<>();
-//                for (HashMap.Entry<String, String> searchField, searchTerm.entrySet()){
-//                    System.out.println("position type" + ":" + "" + "name" + ":" + "" + "employer" + ":" + "" + "location" + ":" + "" + "core company" + ":" + "");
-//                }
-//                if ("HashMap== true;") {
-//                    System.out.println("Found it!");
-//                } else {
-//                    System.out.println("printJobs is not implemented yet");
-//                }
-//            }
-//        }
-    }
-//}
+            HashMap<String, String> searchTerm = new HashMap<String, String>();
+            searchTerm.put("positionType", "PositionType");
+            searchTerm.put("name", "Name");
+            searchTerm.put("employer", "Employer");
+            searchTerm.put("location", "Location");
+              searchTerm.put("coreCompetency", "CoreCompetency");
+              searchTerm.put("all", "All");
+
+        private static void printJobs (ArrayList < HashMap < String, String >> new ArrayList<>()){
+            ArrayList<String> name = new ArrayList<>();
+            ArrayList<String> employer = new ArrayList<>();
+            ArrayList<String> location = new ArrayList<>();
+            ArrayList<String> positionType = new ArrayList<>();
+            ArrayList<String> coreCompetency = new ArrayList<>();
+            for (int i = 0; i <= new ArrayList i++){
+                        System.out.println(i);
+                        if (new ArrayList == searchTerm) {
+                            System.out.printIn(searchField, searchTerm);
+                        }
+                        HashMap<String, name> searchTerm = new HashMap<>();
+                        HashMap<String, employer> searchTerm = new HashMap<>();
+                        HashMap<String, location> searchTerm = new HashMap<>();
+                        HashMap<String, positionType> searchTerm = new HashMap<>();
+                        HashMap<String, coreCompetency> searchTerm = new HashMap<>();
+                        System.out.println("Looping over HashMap");
+                        Set<HashMap.Entry<String, String>> valueSet = HashMap.entrySet();
+                        valueSet.forEach((i)->System.out.println("Key is " + i.choiceKey() +
+                                " Value is " + a.getValue()));
+                        for (HashMap.Entry<String, String> searchField, searchTerm.entrySet()){
+                            System.out.println("position type" + ":" + "" + "name" + ":" + "" + "employer" + ":" + "" + "location" + ":" + "" + "core company" + ":" + "");
+                        }
+                        if ("HashMap== true;") {
+                            System.out.println("Found it!");
+                        } else {
+                            System.out.println("printJobs is not implemented yet");
+                    }
+              }
+            }
+        }
+        }
+}
