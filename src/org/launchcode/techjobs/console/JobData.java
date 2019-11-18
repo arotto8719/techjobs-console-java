@@ -67,6 +67,13 @@ public class JobData {
      */
 
     public static ArrayList<HashMap<String, String>> findByColumnAndValue(String column, String value) {
+// How does the user want to search (e.g. by skill or employer)
+        // create method findbyValue
+        // search in all the columns for the search term
+//                private static void findByValue();
+//                String searchField = getUserSelection("Search by:", columnChoices);
+//                String searchTerm = "giverColumn";
+//                System.out.println(findByValue);
 
         // load data, if not already loaded
         loadData();

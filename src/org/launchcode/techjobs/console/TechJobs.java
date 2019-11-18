@@ -11,7 +11,7 @@ public class TechJobs {
     private String columnChoices;
     private String actionChoices;
     private String someJobs;
-    private String allJobs;
+//    private String allJobs;
 
     private static Scanner in = new Scanner(System.in);
 
@@ -116,13 +116,15 @@ public class TechJobs {
     // make arrayLists, HashMaps, and nested for loops to create printJobs
 // Print search results
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+        if (!someJobs.equals("")) {
+            System.out.println("printJobs is not implemented yet");
+        }
 //        private static void printJobs (ArrayList < HashMap < String, String >> new ArrayList<>() {
             System.out.println("*****");
         for (HashMap<String, String> results : someJobs) {
             for (HashMap.Entry<String, String> somethingElse : results.entrySet()) {
                 System.out.println(somethingElse.getKey() + ":" +""+ " "+ somethingElse.getValue());
             }
-//            System.out.println("printJobs is not implemented yet");
             System.out.println("*****");
         }
     }
