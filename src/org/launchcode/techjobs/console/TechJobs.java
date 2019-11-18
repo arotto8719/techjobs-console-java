@@ -52,6 +52,9 @@ public class TechJobs {
 
                     System.out.println("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
                 }
+// make arrayLists, HashMaps, and nested for loops to create printJobs
+// Print search results
+                JobData.findAll();
                 public static ArrayList<String> findAll (String field){
 
                     // load data, if not already loaded
@@ -61,18 +64,18 @@ public class TechJobs {
                     for (HashMap<String, String> row : allJobs) {
                         String aValue = row.get(field);
 
+                        System.out.printIn(oneJob.get(field1));
+                        System.out.printIn(oneJob.get(field2));
+                    }
                         for (HashMap<String, String> oneJob : someJobs) {
                             //print out the hashmap pieces for one job here
                         }
-
                         if (!values.contains(aValue)) {
                             values.add(aValue);
                         }
-                    }
-
                     return values;
+                    System.out.printIn(someJobs.get(aValue));
                 }
-
 
                 // Print list of skills, employers, etc
                 for (String item : results) {
@@ -152,10 +155,8 @@ public class TechJobs {
     }
 
     // Print a list of jobs
-// make arrayLists, HashMaps, and nested for loops to create printJobs
-// Print search results
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-        System.out.println("printJobs");
+    System.out.println("printJobs");
         }
         System.out.println("position type" + ":" + "" );
         System.out.println("name" + ":" + "" );
