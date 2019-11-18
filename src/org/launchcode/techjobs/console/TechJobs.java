@@ -3,22 +3,19 @@ package org.launchcode.techjobs.console;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
-import java.lang.String;
 
 /**
  * Created by LaunchCode
  */
 public class TechJobs {
+    private String columnChoices;
+    private String actionChoices;
+    private String someJobs;
+    private String allJobs;
 
     private static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
-        ArrayList<String> printJobs = new ArrayList<>();
-        printJobs.add("position type");
-        printJobs.add("name");
-        printJobs.add("employer");
-        printJobs.add("location");
-        printJobs.add("core competency");
 
         // Initialize our field map with key/name pairs
         HashMap<String, String> columnChoices = new HashMap<>();
@@ -51,47 +48,17 @@ public class TechJobs {
                     ArrayList<String> results = JobData.findAll(columnChoice);
 
                     System.out.println("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
-                }
-// make arrayLists, HashMaps, and nested for loops to create printJobs
-// Print search results
-                JobData.findAll();
-                public static ArrayList<String> findAll (String field){
 
-                    // load data, if not already loaded
-                    loadData();
-                    ArrayList<String> values = new ArrayList<>();
-
-                    for (HashMap<String, String> row : allJobs) {
-                        String aValue = row.get(field);
-
-                        System.out.printIn(oneJob.get(field1));
-                        System.out.printIn(oneJob.get(field2));
+                    // Print list of skills, employers, etc
+                    for (String item : results) {
+                        System.out.println(item);
                     }
-                        for (HashMap<String, String> oneJob : someJobs) {
-                            //print out the hashmap pieces for one job here
-                        }
-                        if (!values.contains(aValue)) {
-                            values.add(aValue);
-                        }
-                    return values;
-                    System.out.printIn(someJobs.get(aValue));
                 }
 
-                // Print list of skills, employers, etc
-                for (String item : results) {
-                    System.out.println(item);
-                }
-            }
-        }
             } else { // choice is "search"
 
                 // How does the user want to search (e.g. by skill or employer)
-                // create method findbyValue
-                // search in all the columns for the search term
-//                private static void findByValue ();
-//                String searchField = getUserSelection("Search by:", columnChoices);
-//                String searchTerm = "giverColumn";
-//                System.out.println(findByValue);
+                String searchField = getUserSelection("Search by:", columnChoices);
 
                 // What is their search term?
                 System.out.println("\nSearch term: ");
@@ -104,6 +71,7 @@ public class TechJobs {
                 }
             }
         }
+    }
 
     // ﻿Returns the key of the selected item from the choices Dictionary
     private static String getUserSelection(String menuHeader, HashMap<String, String> choices) {
@@ -144,27 +112,18 @@ public class TechJobs {
         return choiceKeys[choiceIdx];
     }
 
-    public class StringMatchesCaseInsensitive {
-            String stringToSearch = "searchTerm";
-
-             Make Search Methods Case-Insensitive i.e. make JavaScript and Javascript the same string
-            System.out.println("Try 1: " + stringToSearch.matches(".*JavaScript.*"));
-
-             the magic (?i:X) syntax makes this search case-insensitive, so it returns true
-            System.out.println("Try 2: " + stringToSearch.matches("(?i:.*Javascript.*)"));
-    }
-
     // Print a list of jobs
+    // make arrayLists, HashMaps, and nested for loops to create printJobs
+// Print search results
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-    System.out.println("printJobs");
+                System.out.println("*****");
+//        private static void printJobs (ArrayList < HashMap < String, String >> new ArrayList<>() {
+        for (HashMap<String, String> results : someJobs) {
+            for (HashMap.Entry<String, String> somethingElse : results.entrySet()) {
+                System.out.println(somethingElse.getKey() +  ":" +""+ ""+ somethingElse.getValue());
+                System.out.println("*****");
+            }
         }
-        System.out.println("position type" + ":" + "" );
-        System.out.println("name" + ":" + "" );
-        System.out.println("employer" + ":" + "");
-        System.out.println("location" + ":" + "");
-        System.out.println("core company" + ":" + "");
     }
-    }
-
-
+}
 
