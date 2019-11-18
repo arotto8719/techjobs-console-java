@@ -116,13 +116,14 @@ public class TechJobs {
     // make arrayLists, HashMaps, and nested for loops to create printJobs
 // Print search results
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-                System.out.println("*****");
 //        private static void printJobs (ArrayList < HashMap < String, String >> new ArrayList<>() {
+            System.out.println("*****");
         for (HashMap<String, String> results : someJobs) {
             for (HashMap.Entry<String, String> somethingElse : results.entrySet()) {
-                System.out.println(somethingElse.getKey() +  ":" +""+ ""+ somethingElse.getValue());
-                System.out.println("*****");
+                System.out.println(somethingElse.getKey() + ":" +""+ " "+ somethingElse.getValue());
             }
+//            System.out.println("printJobs is not implemented yet");
+            System.out.println("*****");
         }
     }
 }
