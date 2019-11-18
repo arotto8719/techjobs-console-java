@@ -68,12 +68,6 @@ public class JobData {
 
     public static ArrayList<HashMap<String, String>> findByColumnAndValue(String column, String value) {
 // How does the user want to search (e.g. by skill or employer)
-        // create method findbyValue
-        // search in all the columns for the search term
-//                private static void findByValue();
-//                String searchField = getUserSelection("Search by:", columnChoices);
-//                String searchTerm = "giverColumn";
-//                System.out.println(findByValue);
 
         // load data, if not already loaded
         loadData();
@@ -91,7 +85,22 @@ public class JobData {
 
         return jobs;
     }
+// create method findbyValue
+    // search in all the columns for the search term
+    public static ArrayList<HashMap<String, String>> findByValue(String user) {
 
+        loadData();
+
+        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+
+//        if("Web-Front End"  && "Front end web dev" == same) {
+//            return don't list twice;
+//        }
+    }
+//                private static void findByValue();
+//                String searchField = getUserSelection("Search by:", columnChoices);
+//                String searchTerm = "giverColumn";
+//                System.out.println(findByValue);
     /**
      * Read in data from a CSV file and store it in a list
      */

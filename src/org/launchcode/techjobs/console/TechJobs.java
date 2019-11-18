@@ -11,7 +11,7 @@ public class TechJobs {
     private String columnChoices;
     private String actionChoices;
     private String someJobs;
-//    private String allJobs;
+    private String allJobs;
 
     private static Scanner in = new Scanner(System.in);
 
