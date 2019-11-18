@@ -51,13 +51,35 @@ public class TechJobs {
                     ArrayList<String> results = JobData.findAll(columnChoice);
 
                     System.out.println("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
+                }
+                public static ArrayList<String> findAll (String field){
 
-                    // Print list of skills, employers, etc
-                    for (String item : results) {
-                        System.out.println(item);
+                    // load data, if not already loaded
+                    loadData();
+                    ArrayList<String> values = new ArrayList<>();
+
+                    for (HashMap<String, String> row : allJobs) {
+                        String aValue = row.get(field);
+
+                        for (HashMap<String, String> oneJob : someJobs) {
+                            //print out the hashmap pieces for one job here
+                        }
+
+                        if (!values.contains(aValue)) {
+                            values.add(aValue);
+                        }
                     }
+
+                    return values;
                 }
 
+
+                // Print list of skills, employers, etc
+                for (String item : results) {
+                    System.out.println(item);
+                }
+            }
+        }
             } else { // choice is "search"
 
                 // How does the user want to search (e.g. by skill or employer)
@@ -119,23 +141,27 @@ public class TechJobs {
         return choiceKeys[choiceIdx];
     }
 
-//    public class StringMatchesCaseInsensitive {
-//            String stringToSearch = "searchTerm";
-//
-//             Make Search Methods Case-Insensitive i.e. make JavaScript and Javascript the same string
-//            System.out.println("Try 1: " + stringToSearch.matches(".*JavaScript.*"));
-//
-//             the magic (?i:X) syntax makes this search case-insensitive, so it returns true
-//            System.out.println("Try 2: " + stringToSearch.matches("(?i:.*Javascript.*)"));
-//    }
+    public class StringMatchesCaseInsensitive {
+            String stringToSearch = "searchTerm";
+
+             Make Search Methods Case-Insensitive i.e. make JavaScript and Javascript the same string
+            System.out.println("Try 1: " + stringToSearch.matches(".*JavaScript.*"));
+
+             the magic (?i:X) syntax makes this search case-insensitive, so it returns true
+            System.out.println("Try 2: " + stringToSearch.matches("(?i:.*Javascript.*)"));
+    }
 
     // Print a list of jobs
 // make arrayLists, HashMaps, and nested for loops to create printJobs
 // Print search results
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-
         System.out.println("printJobs");
         }
+        System.out.println("position type" + ":" + "" );
+        System.out.println("name" + ":" + "" );
+        System.out.println("employer" + ":" + "");
+        System.out.println("location" + ":" + "");
+        System.out.println("core company" + ":" + "");
     }
     }
 
