@@ -129,4 +129,9 @@ public class TechJobs {
         }
     }
 }
+//             Make Search Methods Case-Insensitive i.e. make JavaScript and Javascript to match the same string
+//            System.out.println("Try 1: " + stringToSearch.matches(".*JavaScript.*"));
+
+//             the magic (?i:X) syntax makes this search case-insensitive, so it returns true
+//            System.out.println("Try 2: " + stringToSearch.matches("(?i:.*Javascript.*)"));
 

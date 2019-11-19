@@ -89,9 +89,17 @@ public class JobData {
     // search in all the columns for the search term
     public static ArrayList<HashMap<String, String>> findByValue(String user) {
 
+        // load data, if not already loaded
         loadData();
 
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+            for (HashMap<String, String> column : jobs) {
+
+            String aValue = column.get(column);
+
+            if (aValue.contains(column)) {
+                jobs.add(column);
+            }
 
 //        if("Web-Front End"  && "Front end web dev" == same) {
 //            return don't list twice;
