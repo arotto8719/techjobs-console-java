@@ -12,6 +12,7 @@ public class TechJobs {
     private String actionChoices;
     private String someJobs;
     private String allJobs;
+    private String value;
 
     private static Scanner in = new Scanner(System.in);
 
@@ -67,12 +68,9 @@ public class TechJobs {
                 searchTerm = searchTerm.toLowerCase();
 
                 if (searchField.equals("all")) {
-                    System.out.println("Search all fields not yet implemented.");
+                    printJobs(JobData.findAll());
                 } else {
                     printJobs(JobData.findByColumnAndValue(searchField, searchTerm));
-                }
-                if(column == true){
-                    printJobs(JobData.findByValue(column));
                 }
             }
         }
@@ -121,8 +119,9 @@ public class TechJobs {
     // make arrayLists, HashMaps, and nested for loops to create printJobs
 // Print search results
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-        if (!someJobs.equals("")) {
-            System.out.println("printJobs is not implemented yet");
+        if(someJobs.size() == 0) {
+            System.out.println("not found");
+            return;
         }
 //        private static void printJobs (ArrayList < HashMap < String, String >> new ArrayList<>() {
             System.out.println("*****");
