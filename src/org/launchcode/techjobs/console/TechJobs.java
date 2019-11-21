@@ -59,15 +59,20 @@ public class TechJobs {
 
                 // How does the user want to search (e.g. by skill or employer)
                 String searchField = getUserSelection("Search by:", columnChoices);
+                //             Make Search Methods Case-Insensitive i.e. make JavaScript and Javascript to match the same string
 
                 // What is their search term?
                 System.out.println("\nSearch term: ");
                 String searchTerm = in.nextLine();
+                searchTerm = searchTerm.toLowerCase();
 
                 if (searchField.equals("all")) {
                     System.out.println("Search all fields not yet implemented.");
-                } else {
+                } else if {
                     printJobs(JobData.findByColumnAndValue(searchField, searchTerm));
+                }
+                else {
+                    printJobs(JobData.findByValue(column));
                 }
             }
         }
@@ -129,9 +134,5 @@ public class TechJobs {
         }
     }
 }
-//             Make Search Methods Case-Insensitive i.e. make JavaScript and Javascript to match the same string
-//            System.out.println("Try 1: " + stringToSearch.matches(".*JavaScript.*"));
 
-//             the magic (?i:X) syntax makes this search case-insensitive, so it returns true
-//            System.out.println("Try 2: " + stringToSearch.matches("(?i:.*Javascript.*)"));
 

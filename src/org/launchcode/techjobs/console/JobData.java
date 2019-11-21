@@ -77,6 +77,7 @@ public class JobData {
         for (HashMap<String, String> row : allJobs) {
 
             String aValue = row.get(column);
+            aValue = aValue.toLowerCase();
 
             if (aValue.contains(value)) {
                 jobs.add(row);
@@ -93,22 +94,16 @@ public class JobData {
         loadData();
 
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
-            for (HashMap<String, String> column : jobs) {
+            for (HashMap<String, String> column : allJobs) {
 
             String aValue = column.get(column);
+            aValue = aValue.toLowerCase();
 
-            if (aValue.contains(column)) {
+            if (aValue.contains(value)) {
                 jobs.add(column);
             }
-
-//        if("Web-Front End"  && "Front end web dev" == same) {
-//            return don't list twice;
-//        }
     }
-//                private static void findByValue();
-//                String searchField = getUserSelection("Search by:", columnChoices);
-//                String searchTerm = "giverColumn";
-//                System.out.println(findByValue);
+
     /**
      * Read in data from a CSV file and store it in a list
      */
